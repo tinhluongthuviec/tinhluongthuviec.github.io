@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Tính lương thử việc 2026 | Công cụ ước tính theo ngày công</title>
+<meta name="description" content="Ước tính lương thử việc theo ngày công thực tế, kiểm tra mức 85% và thời hạn thử việc theo Bộ luật Lao động 2019, kèm bảo hiểm và thuế thu nhập cá nhân.">
+<link rel="icon" type="image/png" href="tai-nguyen/dau-hieu.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tai-nguyen/kieu.css">
+</head>
+<body>
+
+<header class="tv-dau-trang">
+  <div class="tv-khung">
+    <a class="tv-logo" href="#cong-cu" aria-label="Lương thử việc, về đầu trang">
+      <img src="tai-nguyen/logo.png" width="207" height="46" alt="Tính lương thử việc">
+    </a>
+    <nav class="tv-dieu-huong" aria-label="Mục lục trang">
+      <details class="tv-muc-luc">
+        <summary>Mục lục</summary>
+        <ul>
+          <li><a href="#cong-cu">Công cụ tính lương</a></li>
+          <li><a href="#cach-tinh">Cách tính lương thử việc</a></li>
+          <li><a href="#hoi-dap">Hỏi đáp</a></li>
+          <li><a href="#tra-nhanh">Bảng tra nhanh</a></li>
+        </ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ MỤC 1: CÔNG CỤ ============ -->
+<section class="tv-muc-cong-cu" id="cong-cu" aria-labelledby="tv-tieu-de-chinh">
+
+  <div class="tv-bang-banner">
+    <picture class="tv-nen-banner">
+      <source media="(max-width:899px)" srcset="tai-nguyen/anh-banner-dien-thoai.jpg" width="750" height="1200">
+      <img src="tai-nguyen/anh-banner-may-tinh.jpg" width="2560" height="1040" alt="" decoding="async">
+    </picture>
+    <div class="tv-khung">
+      <div class="tv-mo-dau-chu">
+        <span class="tv-nhan-nho">Công cụ tính lương 2026</span>
+        <h1 class="tv-tieu-de-lon" id="tv-tieu-de-chinh"><span>Tính lương</span><span>thử việc</span></h1>
+        <p class="tv-mo-ta">Ước tính lương trong thời gian thử việc theo ngày công thực tế, kiểm tra mức 85% và thời hạn thử việc theo Bộ luật Lao động 2019, kèm khoản bảo hiểm và thuế thu nhập cá nhân.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tv-khung">
+    <div class="tv-cong-cu tv-hien">
+      <form class="tv-bieu-mau" id="tv-bieu-mau" novalidate autocomplete="off">
+
+        <!-- 01 LƯƠNG -->
+        <div class="tv-nhom-nhap">
+          <div class="tv-nhom-dau"><span class="tv-so-thu-tu">01</span><h2 class="tv-nhom-ten">Lương</h2></div>
+
+          <div class="tv-truong">
+            <label class="tv-nhan-truong" for="tv-luong-chinh">Mức lương chính thức <small>(đồng/tháng)</small></label>
+            <span class="tv-o-hau"><input class="tv-o-nhap" id="tv-luong-chinh" type="text" inputmode="numeric" placeholder="Ví dụ: 12.000.000" data-tien><span>đ</span></span>
+          </div>
+
+          <fieldset class="tv-truong">
+            <legend class="tv-nhan-truong">Tỷ lệ lương thử việc</legend>
+            <div class="tv-hang-ty-le">
+              <div class="tv-nhom-nut" data-nhom="ty-le" data-dich="tv-ty-le" role="group" aria-label="Chọn nhanh tỷ lệ">
+                <button type="button" class="tv-nut-chon" data-gia-tri="85" aria-pressed="false">85%</button>
+                <button type="button" class="tv-nut-chon" data-gia-tri="90" aria-pressed="false">90%</button>
+                <button type="button" class="tv-nut-chon" data-gia-tri="100" aria-pressed="false">100%</button>
+              </div>
+              <span class="tv-o-hau tv-o-hau-pt"><input class="tv-o-nhap" id="tv-ty-le" type="text" inputmode="decimal" placeholder="85" aria-label="Tỷ lệ lương thử việc, phần trăm"><span>%</span></span>
+            </div>
+            <p class="tv-ghi-chu">Tối thiểu 85% mức lương của công việc đó (Điều 26 Bộ luật Lao động 2019).</p>
+          </fieldset>
+
+          <div class="tv-truong">
+            <label class="tv-nhan-truong" for="tv-phu-cap">Phụ cấp lương <small>(đồng/tháng, tùy chọn)</small></label>
+            <span class="tv-o-hau"><input class="tv-o-nhap" id="tv-phu-cap" type="text" inputmode="numeric" placeholder="0" data-tien aria-describedby="tv-ghi-phu-cap"><span>đ</span></span>
+            <p class="tv-ghi-chu" id="tv-ghi-phu-cap">Phụ cấp lương tính đóng bảo hiểm và chịu thuế.</p>
+          </div>
+
+          <div class="tv-truong">
+            <label class="tv-nhan-truong" for="tv-tien-an">Tiền ăn giữa ca <small>(đồng/tháng, tùy chọn)</small></label>
+            <span class="tv-o-hau"><input class="tv-o-nhap" id="tv-tien-an" type="text" inputmode="numeric" placeholder="0" data-tien aria-describedby="tv-ghi-tien-an"><span>đ</span></span>
+            <p class="tv-ghi-chu" id="tv-ghi-tien-an">Tiền ăn giữa ca không đóng bảo hiểm, không tính thuế đến 1.200.000 đồng/tháng.</p>
+          </div>
+        </div>
+
+        <!-- 02 THỜI GIAN -->
+        <div class="tv-nhom-nhap">
+          <div class="tv-nhom-dau"><span class="tv-so-thu-tu">02</span><h2 class="tv-nhom-ten">Thời gian</h2></div>
+
+          <div class="tv-truong">
+            <label class="tv-nhan-truong" for="tv-vi-tri">Vị trí / trình độ công việc</label>
+            <select class="tv-o-chon" id="tv-vi-tri">
+              <option value="" selected disabled>Chọn nhóm công việc</option>
+              <option value="quanly">Người quản lý doanh nghiệp, tối đa 180 ngày</option>
+              <option value="caodang">Chuyên môn, kỹ thuật từ cao đẳng trở lên, tối đa 60 ngày</option>
+              <option value="trungcap">Trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ, tối đa 30 ngày</option>
+              <option value="khac">Công việc khác, tối đa 6 ngày làm việc</option>
+            </select>
+          </div>
+
+          <div class="tv-hai-cot">
+            <div class="tv-truong">
+              <label class="tv-nhan-truong" for="tv-ngay-bat-dau">Ngày bắt đầu</label>
+              <input class="tv-o-nhap" id="tv-ngay-bat-dau" type="date" min="2026-07-01">
+            </div>
+            <div class="tv-truong">
+              <label class="tv-nhan-truong" for="tv-ngay-ket-thuc">Ngày kết thúc</label>
+              <input class="tv-o-nhap" id="tv-ngay-ket-thuc" type="date" min="2026-07-01">
+            </div>
+          </div>
+
+          <fieldset class="tv-truong">
+            <legend class="tv-nhan-truong">Lịch nghỉ hằng tuần</legend>
+            <div class="tv-nhom-nut-luoi" data-nhom="lich-nghi" role="group" aria-label="Lịch nghỉ hằng tuần">
+              <button type="button" class="tv-nut-chon" data-gia-tri="cn" aria-pressed="false">Nghỉ Chủ nhật</button>
+              <button type="button" class="tv-nut-chon" data-gia-tri="t7cn" aria-pressed="false">Nghỉ Thứ Bảy, Chủ nhật</button>
+              <button type="button" class="tv-nut-chon" data-gia-tri="chieut7" aria-pressed="false">Nghỉ chiều Thứ Bảy, Chủ nhật</button>
+            </div>
+          </fieldset>
+
+          <div class="tv-truong">
+            <label class="tv-nhan-truong" for="tv-ngay-cong-chuan">Cách tính ngày công chuẩn</label>
+            <select class="tv-o-chon" id="tv-ngay-cong-chuan">
+              <option value="thucte" selected>Theo số ngày làm việc thực tế của tháng</option>
+              <option value="26">Cố định 26 ngày</option>
+              <option value="24">Cố định 24 ngày</option>
+              <option value="22">Cố định 22 ngày</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 03 KHẤU TRỪ -->
+        <div class="tv-nhom-nhap">
+          <div class="tv-nhom-dau"><span class="tv-so-thu-tu">03</span><h2 class="tv-nhom-ten">Khấu trừ</h2></div>
+
+          <fieldset class="tv-truong">
+            <legend class="tv-nhan-truong">Hình thức thử việc</legend>
+            <div class="tv-the-chon-nhom">
+              <label class="tv-the-chon">
+                <input type="radio" name="tv-hinh-thuc" value="hdld3">
+                <span class="tv-the-noi"><span class="tv-diem-tron"></span><span class="tv-the-ten">Ghi trong hợp đồng lao động từ 3 tháng trở lên</span><span class="tv-the-mo-ta">Gồm cả hợp đồng không xác định thời hạn. Đóng BHXH, BHYT, BHTN; thuế theo biểu lũy tiến.</span></span>
+              </label>
+              <label class="tv-the-chon">
+                <input type="radio" name="tv-hinh-thuc" value="hdld1">
+                <span class="tv-the-noi"><span class="tv-diem-tron"></span><span class="tv-the-ten">Ghi trong hợp đồng lao động từ 1 tháng đến dưới 3 tháng</span><span class="tv-the-mo-ta">Đóng BHXH, BHYT, BHTN; thuế khấu trừ 10% khi mỗi lần chi từ 5 triệu đồng. Hợp đồng dưới 1 tháng không được thử việc.</span></span>
+              </label>
+              <label class="tv-the-chon">
+                <input type="radio" name="tv-hinh-thuc" value="rieng">
+                <span class="tv-the-noi"><span class="tv-diem-tron"></span><span class="tv-the-ten">Hợp đồng thử việc riêng</span><span class="tv-the-mo-ta">Không đóng bảo hiểm bắt buộc; thuế khấu trừ 10% khi mỗi lần chi từ 5 triệu đồng.</span></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="tv-truong tv-an" id="tv-hop-cam-ket">
+            <label class="tv-hop-chon">
+              <input type="checkbox" id="tv-cam-ket">
+              <span class="tv-o-vuong" aria-hidden="true"></span>
+              <span class="tv-chu-hop">Đã nộp bản cam kết thu nhập chưa đến mức chịu thuế</span>
+            </label>
+            <p class="tv-ghi-chu">Có cam kết thì không bị khấu trừ 10%; cuối năm vẫn tổng hợp thu nhập và quyết toán nếu vượt mức.</p>
+          </div>
+
+          <fieldset class="tv-truong">
+            <legend class="tv-nhan-truong">Vùng lương tối thiểu</legend>
+            <div class="tv-nhom-nut-4" data-nhom="vung" role="group" aria-label="Vùng lương tối thiểu">
+              <button type="button" class="tv-nut-chon" data-gia-tri="1" aria-pressed="false">I</button>
+              <button type="button" class="tv-nut-chon" data-gia-tri="2" aria-pressed="false">II</button>
+              <button type="button" class="tv-nut-chon" data-gia-tri="3" aria-pressed="false">III</button>
+              <button type="button" class="tv-nut-chon" data-gia-tri="4" aria-pressed="false">IV</button>
+            </div>
+          </fieldset>
+
+          <div class="tv-truong" id="tv-hop-phu-thuoc">
+            <span class="tv-nhan-truong" id="tv-nhan-phu-thuoc">Số người phụ thuộc</span>
+            <div class="tv-tang-giam" role="group" aria-labelledby="tv-nhan-phu-thuoc">
+              <button type="button" class="tv-nut-tron" id="tv-giam" aria-label="Giảm một người phụ thuộc">&minus;</button>
+              <output class="tv-so-giua" id="tv-so-phu-thuoc">0</output>
+              <button type="button" class="tv-nut-tron" id="tv-tang" aria-label="Tăng một người phụ thuộc">+</button>
+            </div>
+            <p class="tv-ghi-chu">Giảm trừ gia cảnh chỉ áp dụng khi thử việc ghi trong hợp đồng lao động từ 3 tháng trở lên.</p>
+          </div>
+        </div>
+
+        <div class="tv-hanh-dong">
+          <button type="submit" class="tv-nut-chinh">Tính lương thử việc</button>
+          <button type="reset" class="tv-lien-ket-nut" id="tv-nhap-lai">Nhập lại</button>
+        </div>
+      </form>
+
+      <aside class="tv-ket-qua tv-chua-co" id="tv-ket-qua" aria-label="Kết quả ước tính">
+        <div class="tv-hop-loi tv-an" id="tv-hop-loi" role="alert"><ul id="tv-ds-loi"></ul></div>
+
+        <div class="tv-trong-kq" id="tv-trong-kq">
+          <p class="tv-trong-kq-tieu-de">Chưa có kết quả</p>
+          <p class="tv-trong-kq-noi">Điền mức lương, tỷ lệ lương thử việc, thời gian, lịch nghỉ, hình thức thử việc và vùng lương tối thiểu để xem số tiền thực nhận ước tính.</p>
+        </div>
+
+        <div id="tv-vung-kq" class="tv-ket-qua-noi tv-an">
+          <div>
+            <p class="tv-ket-qua-nhan">Thực nhận cả kỳ thử việc (ước tính)</p>
+            <p class="tv-so-lon" id="tv-so-lon" aria-live="polite">&mdash;</p>
+            <p class="tv-dong-phu" id="tv-dong-phu"></p>
+          </div>
+
+          <ul class="tv-dong-ket-qua" id="tv-dong-kq"></ul>
+
+          <ul class="tv-kiem-tra" id="tv-kiem-tra"></ul>
+
+          <ul class="tv-luu-y" id="tv-luu-y"></ul>
+
+          <div>
+            <p class="tv-bang-nho-tieu-de">Theo từng tháng</p>
+            <div class="tv-khung-bang">
+              <table class="tv-bang">
+                <thead><tr><th scope="col">Tháng</th><th scope="col">Ngày công</th><th scope="col">Tổng thu nhập</th><th scope="col">Bảo hiểm</th><th scope="col">Thuế</th><th scope="col">Thực nhận</th></tr></thead>
+                <tbody id="tv-bang-thang"></tbody>
+                <tfoot id="tv-bang-tong"></tfoot>
+              </table>
+            </div>
+          </div>
+
+          <details class="tv-dien-giai" id="tv-dien-giai">
+            <summary>Diễn giải từng bước tính</summary>
+            <div class="tv-dien-giai-than" id="tv-dien-giai-than"></div>
+          </details>
+        </div>
+
+        <div class="tv-chi-in" id="tv-phieu-vao"></div>
+
+        <div class="tv-hai-nut">
+          <button type="button" class="tv-nut-vien-nho" id="tv-sao-chep">Sao chép kết quả</button>
+          <button type="button" class="tv-nut-vien-nho" id="tv-in-phieu">In phiếu</button>
+        </div>
+        <p class="tv-cuoi-ket-qua">Kết quả mang tính tham khảo, số liệu áp dụng cho thời gian thử việc từ 01/7/2026 trở đi, theo các mức quy định hiện hành.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MỤC 2: BÀI VIẾT ============ -->
+<section class="tv-muc-bai" id="cach-tinh" aria-labelledby="tv-tieu-de-bai">
+  <div class="tv-khung">
+    <h2 class="tv-tieu-de-muc tv-hien" id="tv-tieu-de-bai">Cách tính lương thử việc theo quy định hiện hành</h2>
+
+    <div class="tv-bo-cuc-bai">
+      <nav class="tv-muc-luc" aria-label="Mục lục bài viết">
+        <p class="tv-muc-luc-nhan">Mục lục</p>
+        <ol id="tv-muc-luc">
+          <li><a href="#muc-01"><b>01</b><span>Lương thử việc là gì</span></a></li>
+          <li><a href="#muc-02"><b>02</b><span>Mức 85% và lương tối thiểu vùng</span></a></li>
+          <li><a href="#muc-03"><b>03</b><span>Thời gian thử việc tối đa</span></a></li>
+          <li><a href="#muc-04"><b>04</b><span>Công thức tính theo ngày công</span></a></li>
+          <li><a href="#muc-05"><b>05</b><span>Bảo hiểm khi thử việc</span></a></li>
+          <li><a href="#muc-06"><b>06</b><span>Thuế thu nhập cá nhân</span></a></li>
+          <li><a href="#muc-07"><b>07</b><span>Làm thêm giờ khi thử việc</span></a></li>
+          <li><a href="#muc-08"><b>08</b><span>Khi kết thúc thời gian thử việc</span></a></li>
+          <li><a href="#muc-09"><b>09</b><span>Quy ước của công cụ</span></a></li>
+          <li><a href="#muc-10"><b>10</b><span>Văn bản căn cứ</span></a></li>
+        </ol>
+      </nav>
+
+      <article class="tv-bai-viet" id="tv-bai-viet">
+        <div class="tv-bai-thu-gon" id="tv-bai-noi-dung">
+          <div class="tv-noi-dung-bai">
+            <h3 id="muc-01"><span>01</span>Lương thử việc là gì</h3>
+            <p>Lương thử việc là khoản tiền người sử dụng lao động trả cho người lao động trong thời gian làm thử công việc mà hai bên dự định giao kết hợp đồng lao động. Giai đoạn này giúp người lao động xem công việc có phù hợp hay không, đồng thời giúp doanh nghiệp kiểm tra năng lực thực tế trước khi ký hợp đồng chính thức.</p>
+            <p>Nội dung thử việc có thể được ghi ngay trong hợp đồng lao động hoặc lập thành hợp đồng thử việc riêng. Cách ghi không làm thay đổi quyền được trả lương, nhưng quyết định việc có đóng bảo hiểm bắt buộc hay không và cách khấu trừ thuế thu nhập cá nhân, được trình bày ở các mục sau.</p>
+
+            <h3 id="muc-02"><span>02</span>Mức 85% và lương tối thiểu vùng</h3>
+            <p>Điều 26 Bộ luật Lao động 2019 quy định tiền lương thử việc do hai bên thỏa thuận, nhưng ít nhất phải bằng 85% mức lương của công việc đó. Mốc 85% tính trên mức lương chính thức của vị trí đang tuyển, không tính trên lương tối thiểu vùng.</p>
+            <p>Ví dụ, công việc có mức lương chính thức 12.000.000 đồng/tháng thì lương thử việc không thấp hơn 10.200.000 đồng/tháng. Doanh nghiệp được phép trả cao hơn, kể cả bằng 100% lương chính thức.</p>
+            <p>Các văn bản hiện hành không nêu trực tiếp quan hệ giữa mốc 85% và lương tối thiểu vùng, nên tồn tại hai cách hiểu. Cách hiểu thứ nhất cho rằng Điều 26 chỉ đặt ngưỡng 85%, vì vậy lương thử việc có thể thấp hơn lương tối thiểu vùng nếu vẫn đạt 85% lương của công việc. Cách hiểu thứ hai dựa vào Điều 91, theo đó lương tối thiểu là mức thấp nhất trả cho người làm công việc giản đơn nhất trong điều kiện lao động bình thường, nên lương thử việc cũng không nên thấp hơn mức này.</p>
+            <p>Cách an toàn là bảo đảm cả hai điều kiện: tối thiểu 85% lương chính thức và không thấp hơn lương tối thiểu vùng nơi làm việc (5.310.000 đồng/tháng ở vùng I trong năm 2026 theo Nghị định 293/2025/NĐ-CP). Mối liên hệ giữa lương tối thiểu vùng và mức lương theo công việc hoặc chức danh được quy định tại Điều 4 Nghị định 399/2026/NĐ-CP, còn bảng mức theo vùng nằm ở Điều 3 của nghị định này. Công cụ phát cảnh báo khi lương thử việc thấp hơn mức vùng và giữ nguyên số đã nhập.</p>
+
+            <h3 id="muc-03"><span>03</span>Thời gian thử việc tối đa</h3>
+            <p>Điều 25 Bộ luật Lao động 2019 giới hạn thời gian thử việc theo tính chất và mức độ phức tạp của công việc.</p>
+            <div class="tv-khung-bang tv-bang-bai">
+              <table class="tv-bang">
+                <thead><tr><th scope="col">Nhóm công việc</th><th scope="col">Thời gian tối đa</th></tr></thead>
+                <tbody>
+                  <tr><td>Người quản lý doanh nghiệp</td><td>180 ngày</td></tr>
+                  <tr><td>Chuyên môn, kỹ thuật từ cao đẳng trở lên</td><td>60 ngày</td></tr>
+                  <tr><td>Trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ</td><td>30 ngày</td></tr>
+                  <tr><td>Công việc khác</td><td>6 ngày làm việc</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Mỗi công việc chỉ được thử việc một lần. Không áp dụng thử việc với người lao động giao kết hợp đồng lao động có thời hạn dưới 01 tháng (khoản 3 Điều 24). Thời gian nêu trên là mức tối đa, hai bên có thể thỏa thuận ngắn hơn. Công cụ đếm ngày dương lịch, tính cả ngày bắt đầu và ngày kết thúc; riêng nhóm công việc khác được đếm theo ngày làm việc.</p>
+
+            <h3 id="muc-04"><span>04</span>Công thức tính theo ngày công</h3>
+            <p>Khi trả lương theo tháng, số tiền thực nhận trong từng tháng phụ thuộc vào số ngày công của người lao động trong kỳ thử việc so với ngày công chuẩn của tháng đó.</p>
+            <div class="tv-cong-thuc">
+              <p>Lương thử việc của tháng = Mức lương chính thức × Tỷ lệ thử việc ÷ Ngày công chuẩn × Ngày công thực tế</p>
+            </div>
+            <p>Tháng mà kỳ thử việc phủ trọn các ngày làm việc thì nhận đủ lương thử việc của tháng. Hệ số ngày công không vượt quá 1, nên ngày công thực tế lớn hơn ngày công chuẩn cố định không làm tăng lương tháng.</p>
+            <p><strong>Ví dụ 1, đủ công.</strong> Mức lương chính thức 12.000.000 đồng, tỷ lệ 85%, thử việc từ 02/11/2026 đến 31/12/2026, nghỉ Chủ nhật. Tháng 11 có 25 ngày làm việc, tháng 12 có 27 ngày làm việc, kỳ thử việc phủ trọn cả hai tháng.</p>
+            <ul class="tv-vi-du">
+              <li>Lương thử việc mỗi tháng: 12.000.000 × 85% = 10.200.000 đồng</li>
+              <li>Tháng 11/2026: 25/25 ngày công, nhận 10.200.000 đồng</li>
+              <li>Tháng 12/2026: 27/27 ngày công, nhận 10.200.000 đồng</li>
+            </ul>
+            <p><strong>Ví dụ 2, thiếu công.</strong> Mức lương chính thức 8.000.000 đồng, tỷ lệ 85%, thử việc từ 16/11/2026 đến 15/12/2026, nghỉ Chủ nhật, ngày công chuẩn cố định 26 ngày. Mỗi tháng có 13 ngày làm việc nằm trong kỳ thử việc.</p>
+            <ul class="tv-vi-du">
+              <li>Lương thử việc tháng đủ công: 8.000.000 × 85% = 6.800.000 đồng</li>
+              <li>Hệ số ngày công: 13 ÷ 26 = 0,5</li>
+              <li>Tháng 11/2026 và tháng 12/2026: mỗi tháng 6.800.000 × 0,5 = 3.400.000 đồng, cả kỳ 6.800.000 đồng</li>
+            </ul>
+            <p>Phụ cấp lương và tiền ăn giữa ca trong thời gian thử việc được tính theo cùng hệ số ngày công.</p>
+
+            <h3 id="muc-05"><span>05</span>Bảo hiểm khi thử việc</h3>
+            <p>Người làm việc theo hợp đồng lao động từ đủ 01 tháng trở lên thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc theo Luật Bảo hiểm xã hội 2024. Khi nội dung thử việc nằm trong hợp đồng lao động, người lao động và doanh nghiệp cùng đóng BHXH, BHYT và BHTN từ ngày bắt đầu làm việc. Phần người lao động chịu là 8% BHXH, 1,5% BHYT và 1% BHTN, tổng cộng 10,5%. Mức đóng BHYT chung là 4,5% tiền lương, trong đó người lao động 1,5% (Nghị định 188/2025/NĐ-CP).</p>
+            <p>Căn cứ đóng là mức lương tháng ghi trong hợp đồng cộng phụ cấp lương, không giảm theo số ngày công trong tháng. Với BHXH và BHYT, căn cứ đóng không thấp hơn mức tham chiếu 2.530.000 đồng (điểm đ khoản 1 Điều 31 Luật Bảo hiểm xã hội 2024; mức tham chiếu theo Nghị định 161/2026/NĐ-CP) và không vượt trần 20 lần mức tham chiếu, tức 50.600.000 đồng. BHTN không có mức sàn bằng số; trần của BHTN là 20 lần lương tối thiểu vùng. Tiền ăn giữa ca không nằm trong căn cứ đóng.</p>
+            <p>Nếu hai bên ký hợp đồng thử việc riêng, giai đoạn này không thuộc diện đóng BHXH bắt buộc (khoản 5 Điều 3 Nghị định 158/2025/NĐ-CP) và cũng không có BHTN, vì BHTN chỉ áp dụng với người làm việc theo hợp đồng lao động (Điều 31 Luật Việc làm 2025). Người lao động nhận trọn khoản lương trước thuế, thời gian đóng bảo hiểm bắt đầu khi hợp đồng lao động chính thức có hiệu lực.</p>
+            <p>Người lao động không hưởng tiền lương từ 14 ngày làm việc trở lên trong tháng thì không phải đóng BHXH tháng đó (khoản 5 Điều 33 Luật Bảo hiểm xã hội 2024). Với kỳ thử việc bắt đầu muộn hoặc kết thúc sớm trong tháng, số ngày làm việc nằm ngoài kỳ thử việc có thể đạt ngưỡng này. Công cụ đếm các ngày làm việc nằm ngoài kỳ thử việc trong từng tháng; từ 14 ngày trở lên thì tháng đó không trừ bảo hiểm vào lương thử việc. Ở tháng đầu, phần ngày ngoài kỳ là thời gian chưa vào làm, chưa hưởng lương; ở tháng cuối, bảo hiểm của tháng đó được tính vào lương chính thức.</p>
+
+            <h3 id="muc-06"><span>06</span>Thuế thu nhập cá nhân</h3>
+            <p>Với thử việc ghi trong hợp đồng lao động từ 3 tháng trở lên hoặc không xác định thời hạn, thu nhập từ tiền lương tính thuế theo biểu lũy tiến từng phần. Thu nhập tính thuế bằng thu nhập chịu thuế trừ các khoản bảo hiểm bắt buộc, giảm trừ bản thân 15.500.000 đồng/tháng và 6.200.000 đồng/tháng cho mỗi người phụ thuộc đã đăng ký (Nghị quyết 110/2025/UBTVQH15, áp dụng từ kỳ tính thuế 2026).</p>
+            <div class="tv-khung-bang tv-bang-bai">
+              <table class="tv-bang">
+                <thead><tr><th scope="col">Bậc</th><th scope="col">Thu nhập tính thuế mỗi tháng</th><th scope="col">Thuế suất</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Đến 10 triệu đồng</td><td>5%</td></tr>
+                  <tr><td>2</td><td>Trên 10 đến 30 triệu đồng</td><td>10%</td></tr>
+                  <tr><td>3</td><td>Trên 30 đến 60 triệu đồng</td><td>20%</td></tr>
+                  <tr><td>4</td><td>Trên 60 đến 100 triệu đồng</td><td>30%</td></tr>
+                  <tr><td>5</td><td>Trên 100 triệu đồng</td><td>35%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Tiền ăn giữa ca trả bằng tiền được miễn thuế đến 1.200.000 đồng/tháng từ ngày 01/7/2026 (điểm g khoản 2 Điều 8 Nghị định 253/2026/NĐ-CP). Phần vượt mức này tính vào thu nhập chịu thuế. Phụ cấp lương thì chịu thuế.</p>
+            <p>Với thử việc ghi trong hợp đồng lao động từ 1 tháng đến dưới 3 tháng, tổ chức chi trả khấu trừ 10% khi mỗi lần chi từ 5.000.000 đồng trở lên (khoản 2 Điều 50 Nghị định 253/2026/NĐ-CP, áp dụng từ 01/7/2026). Điều khoản này không nhắc tên hợp đồng thử việc riêng; theo cách hiểu phổ biến, khoản chi theo hợp đồng thử việc riêng được xử lý như trường hợp không ký hợp đồng lao động hoặc ký hợp đồng dưới 3 tháng, tức khấu trừ 10% khi mỗi lần trả từ 5.000.000 đồng. Dưới mức này, tổ chức chi trả chỉ khấu trừ khi cá nhân có yêu cầu. Công cụ coi lương của mỗi tháng là một lần chi và không khấu trừ khi dưới 5.000.000 đồng. Hợp đồng thử việc riêng kéo dài từ 3 tháng trở lên chủ yếu gặp ở nhóm quản lý; văn bản chưa hướng dẫn rõ trường hợp này nên công cụ tạm tính theo khấu trừ 10%.</p>
+            <p>Cá nhân chỉ có thu nhập thuộc diện khấu trừ 10% và ước tính tổng thu nhập chịu thuế sau giảm trừ gia cảnh chưa đến mức phải nộp thuế có thể làm bản cam kết để không bị khấu trừ. Mẫu thường dùng là 08/CK-TNCN; nên hỏi bộ phận kế toán của đơn vị về mẫu đang áp dụng. Cuối năm thu nhập vẫn được tổng hợp, và người lao động phải quyết toán nếu tổng thu nhập vượt mức phải nộp thuế.</p>
+
+            <h3 id="muc-07"><span>07</span>Làm thêm giờ khi thử việc</h3>
+            <p>Tiền làm thêm giờ tính theo đơn giá tiền lương thực trả trong thời gian thử việc, không tính theo lương chính thức. Mức tối thiểu là 150% vào ngày thường, 200% vào ngày nghỉ hằng tuần và 300% vào ngày lễ, Tết, chưa kể tiền lương của ngày nghỉ lễ có hưởng lương (khoản 1 Điều 98 Bộ luật Lao động 2019).</p>
+            <p>Ví dụ, lương thử việc 10.200.000 đồng, ngày công chuẩn 26 ngày, ngày làm việc 8 giờ thì đơn giá một giờ làm việc bình thường khoảng 49.038 đồng. Một giờ làm thêm vào ngày thường được trả khoảng 73.558 đồng. Khoản này phát sinh theo bảng chấm công thực tế và không nằm trong kết quả của công cụ.</p>
+
+            <h3 id="muc-08"><span>08</span>Khi kết thúc thời gian thử việc</h3>
+            <p>Hết thời gian thử việc, doanh nghiệp phải thông báo kết quả cho người lao động. Nếu đạt yêu cầu, doanh nghiệp tiếp tục thực hiện hợp đồng lao động đã giao kết với trường hợp thử việc ghi trong hợp đồng, hoặc phải giao kết hợp đồng lao động với trường hợp ký hợp đồng thử việc riêng.</p>
+            <p>Nếu không đạt, hợp đồng lao động hoặc hợp đồng thử việc chấm dứt. Theo khoản 2 Điều 27, trong thời gian thử việc mỗi bên có quyền hủy bỏ thỏa thuận mà không cần báo trước và không phải bồi thường. Phần lương cho những ngày đã làm vẫn phải được thanh toán đầy đủ.</p>
+
+            <h3 id="muc-09"><span>09</span>Quy ước của công cụ</h3>
+            <p>Kết quả được tính theo các quy ước sau, nên có thể lệch so với bảng lương thực tế của từng đơn vị.</p>
+            <ul class="tv-vi-du">
+              <li>Ngày lễ, Tết được tính như ngày công, vì người thử việc được nghỉ lễ và hưởng nguyên lương.</li>
+              <li>Mỗi tháng lịch được tính riêng. Hệ số ngày công tối đa bằng 1.</li>
+              <li>Căn cứ đóng bảo hiểm tính theo mức lương tháng, không nhân hệ số ngày công. Căn cứ đóng BHXH, BHYT không thấp hơn mức tham chiếu 2.530.000 đồng; BHTN không có mức sàn.</li>
+              <li>Tháng có từ 14 ngày làm việc trở lên nằm ngoài kỳ thử việc không trừ bảo hiểm vào lương thử việc.</li>
+              <li>Phụ cấp lương tính đóng bảo hiểm và chịu thuế. Tiền ăn giữa ca không đóng bảo hiểm và miễn thuế đến mức trần của tháng.</li>
+              <li>Thông số pháp lý được tra theo tháng của khoản lương. Công cụ áp dụng cho thời gian thử việc từ 01/7/2026 trở đi và dùng các mức hiện hành đến khi có văn bản mới thay thế, vì khoản trả trước 01/7/2026 chưa có hướng dẫn chuyển tiếp rõ về ngưỡng khấu trừ 10%.</li>
+            </ul>
+            <p>Ngày công thực tế còn phụ thuộc nội quy, lịch nghỉ lễ và cách chấm công của từng đơn vị. Khi cần số liệu chính xác để đối chiếu, nên trao đổi với bộ phận nhân sự hoặc kế toán tiền lương.</p>
+
+            <h3 id="muc-10"><span>10</span>Văn bản căn cứ</h3>
+            <div class="tv-can-cu">
+              <b>Văn bản căn cứ</b>
+              <ul>
+                <li>Bộ luật Lao động số 45/2019/QH14: Điều 24 đến Điều 27, Điều 91, Điều 98.</li>
+                <li>Luật Bảo hiểm xã hội số 41/2024/QH15: điểm đ khoản 1 Điều 31, khoản 5 Điều 33.</li>
+                <li>Luật Việc làm số 74/2025/QH15: Điều 31 khoản 2, Điều 33, Điều 34 khoản 2.</li>
+                <li>Nghị định 158/2025/NĐ-CP: khoản 5 Điều 3.</li>
+                <li>Nghị định 161/2026/NĐ-CP về mức tham chiếu.</li>
+                <li>Nghị định 188/2025/NĐ-CP về mức đóng bảo hiểm y tế.</li>
+                <li>Nghị định 293/2025/NĐ-CP và Nghị định 399/2026/NĐ-CP (Điều 3, Điều 4) về mức lương tối thiểu vùng.</li>
+                <li>Luật Thuế thu nhập cá nhân số 109/2025/QH15: Điều 9.</li>
+                <li>Nghị quyết 110/2025/UBTVQH15 về mức giảm trừ gia cảnh.</li>
+                <li>Nghị định 253/2026/NĐ-CP: điểm g khoản 2 Điều 8, khoản 2 Điều 50.</li>
+                <li>Nghị định 145/2020/NĐ-CP: khoản 2 Điều 65.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tv-thanh-mo-rong">
+          <button type="button" class="tv-nut-vien" id="tv-nut-bai" aria-expanded="false" aria-controls="tv-bai-noi-dung">Xem toàn bộ bài viết</button>        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MỤC 3: HỎI ĐÁP ============ -->
+<section class="tv-muc-hoi-dap" id="hoi-dap" aria-labelledby="tv-tieu-de-hoi">
+  <div class="tv-khung">
+    <h2 class="tv-tieu-de-muc tv-hien" id="tv-tieu-de-hoi">Câu hỏi thường gặp</h2>
+    <div class="tv-danh-sach-hoi tv-hien" id="tv-danh-sach-hoi">
+      <details class="tv-hoi-dap"><summary><span class="tv-hd-so">01</span><span class="tv-hd-cau">Lương thử việc có được thấp hơn 85% không?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Không. Tiền lương thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó. Thỏa thuận thấp hơn không phù hợp quy định, và doanh nghiệp có thể bị xử phạt vi phạm hành chính.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> Điều 26 Bộ luật Lao động 2019.</p></div></details>
+      <details class="tv-hoi-dap"><summary><span class="tv-hd-so">02</span><span class="tv-hd-cau">Thử việc có phải đóng BHXH không?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Tùy hình thức. Thử việc ghi trong hợp đồng lao động từ đủ 01 tháng trở lên thì đóng BHXH, BHYT, BHTN từ ngày bắt đầu làm việc. Hợp đồng thử việc riêng không thuộc diện đóng BHXH bắt buộc và không có BHTN. Người lao động không hưởng tiền lương từ 14 ngày làm việc trở lên trong tháng thì không phải đóng BHXH tháng đó, nên tháng có từ 14 ngày làm việc trở lên nằm ngoài kỳ thử việc không trừ bảo hiểm vào lương thử việc. Căn cứ đóng BHXH, BHYT không thấp hơn mức tham chiếu 2.530.000 đồng.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> điểm đ khoản 1 Điều 31 và khoản 5 Điều 33 Luật Bảo hiểm xã hội 2024; khoản 5 Điều 3 Nghị định 158/2025/NĐ-CP; Điều 31 khoản 2, Điều 33, Điều 34 khoản 2 Luật Việc làm 2025.</p></div></details>
+      <details class="tv-hoi-dap"><summary><span class="tv-hd-so">03</span><span class="tv-hd-cau">Thời gian thử việc tối đa là bao lâu?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Tối đa 180 ngày với người quản lý doanh nghiệp, 60 ngày với công việc cần trình độ từ cao đẳng trở lên, 30 ngày với trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ và 06 ngày làm việc với công việc khác. Đây là mức tối đa, hai bên có thể thỏa thuận ngắn hơn. Hết thời gian này, nếu đạt yêu cầu thì doanh nghiệp tiếp tục hợp đồng đã ký hoặc phải giao kết hợp đồng lao động.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> Điều 25 và khoản 1 Điều 27 Bộ luật Lao động 2019.</p></div></details>
+      <details class="tv-hoi-dap"><summary><span class="tv-hd-so">04</span><span class="tv-hd-cau">Lương thử việc có bị trừ thuế 10% không?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Khấu trừ 10% áp dụng với thử việc trong hợp đồng lao động từ 1 tháng đến dưới 3 tháng, khi mỗi lần chi từ 5.000.000 đồng trở lên (từ 01/7/2026). Điều khoản không nhắc tên hợp đồng thử việc riêng; theo cách hiểu phổ biến, khoản chi này được xử lý như trường hợp không ký hợp đồng lao động hoặc ký hợp đồng dưới 3 tháng. Dưới 5.000.000 đồng thì chỉ khấu trừ khi cá nhân có yêu cầu. Cá nhân chỉ có thu nhập thuộc diện khấu trừ 10% và ước tính tổng thu nhập chịu thuế sau giảm trừ gia cảnh chưa đến mức nộp thuế có thể làm bản cam kết (mẫu thường dùng là 08/CK-TNCN, nên hỏi bộ phận kế toán mẫu đang áp dụng). Thử việc trong hợp đồng lao động từ 3 tháng trở lên tính thuế lũy tiến sau các khoản giảm trừ, nên nhiều trường hợp không phải nộp.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> khoản 2 Điều 50 Nghị định 253/2026/NĐ-CP; Điều 9 Luật Thuế thu nhập cá nhân 109/2025/QH15; Nghị quyết 110/2025/UBTVQH15.</p></div></details>
+      <details class="tv-hoi-dap"><summary><span class="tv-hd-so">05</span><span class="tv-hd-cau">Thử việc không đạt có được trả lương không?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Có. Kết quả thử việc không ảnh hưởng đến quyền được trả lương cho những ngày đã làm theo mức đã thỏa thuận. Doanh nghiệp không được trừ lương với lý do không đạt yêu cầu.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> Điều 26 và Điều 27 Bộ luật Lao động 2019.</p></div></details>
+      <details class="tv-hoi-dap"><summary><span class="tv-hd-so">06</span><span class="tv-hd-cau">Được thử việc mấy lần?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Chỉ một lần đối với mỗi công việc. Doanh nghiệp không thể kéo dài hoặc ký thêm thỏa thuận thử việc thứ hai cho cùng vị trí, kể cả khi tổng thời gian vẫn nằm trong giới hạn.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> Điều 25 Bộ luật Lao động 2019.</p></div></details>
+      <details class="tv-hoi-dap tv-hoi-dap-them tv-an"><summary><span class="tv-hd-so">07</span><span class="tv-hd-cau">Nghỉ ngang trong thời gian thử việc có phải báo trước?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Không bắt buộc. Trong thời gian thử việc, mỗi bên có quyền hủy bỏ thỏa thuận thử việc mà không cần báo trước và không phải bồi thường. Thông báo sớm vẫn giúp hai bên bàn giao công việc và chốt lương gọn gàng.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> khoản 2 Điều 27 Bộ luật Lao động 2019.</p></div></details>
+      <details class="tv-hoi-dap tv-hoi-dap-them tv-an"><summary><span class="tv-hd-so">08</span><span class="tv-hd-cau">Thử việc có được hưởng phụ cấp, ngày phép không?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Phụ cấp do hai bên thỏa thuận, pháp luật không bắt buộc trả riêng cho thời gian thử việc. Phụ cấp lương được tính đóng bảo hiểm và chịu thuế, còn tiền ăn giữa ca thì không đóng bảo hiểm và miễn thuế đến mức trần. Về ngày nghỉ hằng năm, thời gian thử việc được tính là thời gian làm việc nếu người lao động tiếp tục làm việc sau khi hết thử việc.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> khoản 2 Điều 65 Nghị định 145/2020/NĐ-CP; điểm g khoản 2 Điều 8 Nghị định 253/2026/NĐ-CP.</p></div></details>
+      <details class="tv-hoi-dap tv-hoi-dap-them tv-an"><summary><span class="tv-hd-so">09</span><span class="tv-hd-cau">Làm thêm giờ khi thử việc tính lương thế nào?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Tiền làm thêm giờ tính theo đơn giá tiền lương thực trả trong thời gian thử việc. Mức tối thiểu là 150% vào ngày thường, 200% vào ngày nghỉ hằng tuần và 300% vào ngày lễ, Tết, chưa kể tiền lương của ngày nghỉ lễ có hưởng lương.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> khoản 1 Điều 98 Bộ luật Lao động 2019.</p></div></details>
+      <details class="tv-hoi-dap tv-hoi-dap-them tv-an"><summary><span class="tv-hd-so">10</span><span class="tv-hd-cau">Hợp đồng dưới 1 tháng có thử việc không?</span><span class="tv-hd-dau" aria-hidden="true"></span></summary>
+        <div class="tv-hd-tra-loi"><p>Không. Pháp luật không áp dụng thử việc đối với hợp đồng lao động có thời hạn dưới 01 tháng. Người lao động trong trường hợp này làm việc và hưởng lương theo hợp đồng ngay từ đầu.</p><p class="tv-hd-can-cu"><b>Căn cứ:</b> khoản 3 Điều 24 Bộ luật Lao động 2019.</p></div></details>
+    </div>
+    <button type="button" class="tv-nut-vien tv-them-hoi" id="tv-nut-them-hoi" aria-expanded="false">Xem thêm 4 câu hỏi</button>
+  </div>
+</section>
+
+<!-- ============ MỤC 4: BẢNG TRA NHANH ============ -->
+<section class="tv-muc-tra-nhanh" id="tra-nhanh" aria-labelledby="tv-tieu-de-tra">
+  <div class="tv-khung">
+    <h2 class="tv-tieu-de-muc tv-hien" id="tv-tieu-de-tra">Bảng tra nhanh</h2>
+    <div class="tv-luoi-the">
+      <div class="tv-the tv-hien">
+        <h3 class="tv-the-tieu-de">Thời gian thử việc tối đa theo trình độ</h3>
+        <div class="tv-hang-so"><b>180<small>ngày</small></b><span>Người quản lý doanh nghiệp</span></div>
+        <div class="tv-hang-so"><b>60<small>ngày</small></b><span>Chuyên môn, kỹ thuật từ cao đẳng trở lên</span></div>
+        <div class="tv-hang-so"><b>30<small>ngày</small></b><span>Trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ</span></div>
+        <div class="tv-hang-so"><b>6<small>ngày</small></b><span>Công việc khác (tính theo ngày làm việc)</span></div>
+      </div>
+      <div class="tv-the tv-hien">
+        <h3 class="tv-the-tieu-de">Lương tối thiểu vùng theo tháng</h3>
+        <div class="tv-hang-vung tv-hang-vung-dau"><span></span><span>Năm 2026</span><span>Từ 01/01/2027</span></div>
+        <div class="tv-hang-vung"><span>Vùng I</span><b>5.310.000</b><b>5.700.000</b></div>
+        <div class="tv-hang-vung"><span>Vùng II</span><b>4.730.000</b><b>5.080.000</b></div>
+        <div class="tv-hang-vung"><span>Vùng III</span><b>4.140.000</b><b>4.450.000</b></div>
+        <div class="tv-hang-vung"><span>Vùng IV</span><b>3.700.000</b><b>4.040.000</b></div>
+        <p class="tv-ghi-chu">Đơn vị: đồng/tháng. Nghị định 293/2025/NĐ-CP (năm 2026) và Nghị định 399/2026/NĐ-CP (từ 01/01/2027).</p>
+      </div>
+      <div class="tv-the tv-hien">
+        <h3 class="tv-the-tieu-de">Tỷ lệ trích bảo hiểm phần người lao động</h3>
+        <div class="tv-hang-so"><b>8%</b><span>Bảo hiểm xã hội (BHXH)</span></div>
+        <div class="tv-hang-so"><b>1,5%</b><span>Bảo hiểm y tế (BHYT)</span></div>
+        <div class="tv-hang-so"><b>1%</b><span>Bảo hiểm thất nghiệp (BHTN)</span></div>
+        <div class="tv-hang-so tv-hang-tong"><b>10,5%</b><span>Tổng cộng phần người lao động</span></div>
+        <p class="tv-ghi-chu">Trần căn cứ đóng BHXH, BHYT: 50.600.000 đồng/tháng, bằng 20 lần mức tham chiếu 2.530.000 đồng. Căn cứ đóng BHXH, BHYT không thấp hơn mức tham chiếu; BHTN không có mức sàn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="tv-chan-trang">
+  <div class="tv-khung">
+    <div class="tv-chan-tren">
+      <div class="tv-chan-trai">
+        <a class="tv-logo" href="#cong-cu" aria-label="Lương thử việc, về đầu trang">
+          <img src="tai-nguyen/logo.png" width="207" height="46" alt="Tính lương thử việc" loading="lazy">
+        </a>
+        <p>Công cụ ước tính lương thử việc theo Bộ luật Lao động 2019 và các văn bản hướng dẫn. Kết quả chỉ mang tính tham khảo.</p>
+      </div>
+      <a class="tv-ve-dau" href="#cong-cu">Về đầu trang ↑</a>
+    </div>
+    <p class="tv-ban-quyen">© 2026 Lương Thử Việc</p>
+  </div>
+</footer>
+
+<script src="tinh-toan/thong-so.js"></script>
+<script src="tinh-toan/may-tinh.js"></script>
+<script src="tai-nguyen/tuong-tac.js"></script>
+</body>
+</html>

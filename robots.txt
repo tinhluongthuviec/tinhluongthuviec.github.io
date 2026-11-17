@@ -1,0 +1,3 @@
+# Cho phep tat ca bot (tim kiem va AI) thu thap trang.
+User-agent: *
+Allow: /
